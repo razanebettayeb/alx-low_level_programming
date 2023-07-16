@@ -8,13 +8,17 @@ int main(void)
 	char c = 'a';
 	char C = 'A';
 
-	while (c <= 'z' && C <= 'Z')
+	while (c <= 'z')
 	{
 		putchar(c);
-		putchar(C);
 		c++;
+	}
+	while (C <= 'Z')
+	{
+		putchar(C);
 		C++;
 	}
 	putchar('\n');
+
 	return (0);
 }
