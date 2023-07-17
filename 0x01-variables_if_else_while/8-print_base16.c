@@ -1,22 +1,15 @@
 #include <stdio.h>
 /**
- * main - main function
- * Return: Always 0
- */
+  *main - prints numbers of base 16 in lowercase
+  *Return: 0
+*/
 int main(void)
 {
-	char c = 'a';
-	char C = 'A';
+	int num;
 
-	while (c <= 'z')
+	for (num = 0; num <= 15; num++)
 	{
-		putchar(c);
-		c++;
-	}
-	while (C <= 'Z')
-	{
-		putchar(C);
-		C++;
+		printf("%x", num);
 	}
 	putchar('\n');
 
