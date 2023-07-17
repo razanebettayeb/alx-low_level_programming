@@ -9,7 +9,7 @@ int main(void)
 
 	while (num <= 9)
 	{
-		putchar(num % 10 + 0);
+		putchar (num 48 to 57);
 		num++;
 	}
 	putchar('\n');
