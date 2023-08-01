@@ -1,4 +1,4 @@
-#include “leb.h”
+#include "holberton.h"
 /**
  * _strchr - function that locates a character in a string
  *@s: first value -char
@@ -17,7 +17,7 @@ char *_strchr(char *s, char c)
 		{
 			return (s);
 		}
-		s++;
+	       s++;
 	}
 	if (c == '\0')
 		return (s);
