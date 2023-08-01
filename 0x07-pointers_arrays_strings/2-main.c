@@ -1,4 +1,4 @@
-#include “leb.h”
+#include "leb.h"
 #include <stdio.h>
 
 /**
@@ -11,7 +11,7 @@ int main(void)
 	char *s = "hello";
 	char *f;
 
-	f = _strchr(s, 'l');
+	f = _strchr (s, 'l');
 
 	if (f != NULL)
 	{
