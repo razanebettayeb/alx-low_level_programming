@@ -6,19 +6,16 @@
  *
  * Return: char with result
  */
-char *_strchr (char *s, char c)
+char *_strchr(char *s, char )
 {
-	if (*s == '\0')
-		return (s);
+
 	while (*s)
 	{
-		if (*s == c)
-		{
+		if (c == *s)
 			return (s);
-		}
-	       s++;
+		s++;
 	}
-	if (c == '\0')
+	if (c == *s)
 		return (s);
-	return ('\0');
+	return (NULL);
 }
