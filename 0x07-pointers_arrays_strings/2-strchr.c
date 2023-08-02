@@ -1,12 +1,13 @@
 #include "leb.h"
+#include <stdio.h>
+
 /**
- * _strchr - function that locates a character in a string
- *@s: first value -char
- *@c: second value - char
- *
- * Return: char with result
+ * _strchr - a function that locates a character in a string.
+ * @s: an input string to search in
+ * @c: an input character to locate into string s
+ * Return: returns pointer to c position
  */
-char *_strchr(char *s, char )
+char *_strchr(char *s, char c)
 {
 
 	while (*s)
