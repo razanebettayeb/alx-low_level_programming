@@ -1,50 +1,26 @@
 #include "main.h"
-int _sqrt(int n, int start, int end);
 /**
- * _sqrt_recursion - square root
- * @n: the number
- * Return: Always 0
+ * _sqrt_recursion - function to find the square root of input value
+ * @n: the input intger to the function
+ * Return: the value of the square root
  */
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
-	{
-		return (-1);
-	}
-	if (n == 0)
-	{
-		return (0);
-	}
-	if (n == 1)
-	{
-		return (1);
-	}
-	return (_sqrt(n, 0, n));
+	return (_sqrt(n, 1));
 }
 /**
- * _sqrt - assists the sqrt recursion function
- * @n: number
- * @start: the beginning
- * @end: the last
- * Return: Always 0
+ * _sqrt - a helping function that have the recursive provalbilty
+ * @n: the input intger
+ * @i: the intger we recusive with
+ * Return: the square root of the number
  */
-int _sqrt(int n, int start, int end)
+int _sqrt(int n, int i)
 {
-	int mid, square;
-
-	if (start > end)
-	{
+	if (n < 0)
 		return (-1);
-	}
-	mid = (start + end) / 2;
-	square = mid * mid;
-	if (square == n)
-	{
-		return (mid);
-	}
-	else if (square < n)
-	{
-		_sqrt(n, mid + 1, end);
-	}
-	return (_sqrt(n, start, mid - 1));
+	if ((i * i) > n)
+		return (-1);
+	if (i * i == n)
+		return (i);
+	return (_sqrt(n, i + 1));
 }
