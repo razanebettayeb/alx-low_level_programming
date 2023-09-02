@@ -1,24 +1,25 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * flip_bits - return number of bits thzt would need to be flipped to
- * transform one number to another
- *
+ * flip_bits - flip bits to convert one number to another number
  * @n: first number
- * @m: second numbea
- *
- * Return: number of bits to flips convert numbers
+ * @m: second number to convert to
+ * Return: number of bits that was needed to flip
  */
- unsigned int flip_bits(unsigned long int n, unsigned long int m)
- {
-	unsigned long int xorval = n ^ m;
-	unsigned int count = 0;
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
+{
+	unsigned long int diff;
+	int counter;
 
-	while (xorval)
+	diff = n ^ m;
+	counter = 0;
+
+	while (diff)
 	{
-		if (xorval & 1ul)
-			count++;
-		xorval = xorval >> 1;
+		counter++;
+		diff &= (diff - 1);
 	}
-	return (count);
+
+	return (counter);
 }
